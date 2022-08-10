@@ -15,14 +15,14 @@ contract Token is ERC20 {
     uint _toFeeRate = 6;
     uint _toMarketRate = 2;
 
-    constructor() ERC20('AXSK','AXSK'){
+    constructor() ERC20('PGOSK','PGOSK'){
         _owner = _msgSender();
         daoaddr = address(this);
         maddr = address(this);
         _tradeStatus = true;
 
         _whitelist[msg.sender] = true;
-        super._mint(msg.sender,2500000 * 1e18);
+        super._mint(msg.sender,10000000 * 1e18);
     }
 
     function setDaoaddr(address _dao) external {
